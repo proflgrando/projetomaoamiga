@@ -1,0 +1,156 @@
+:root {
+  --blue-dark: #003366;
+  --blue-light: #0059b3;
+  --white: #ffffff;
+}
+
+/* ===== RESET ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: #f4f6fa;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* ===== NAVBAR ===== */
+nav {
+    background-color: #003366; /* mesmo azul do footer */
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 40px;
+}
+
+nav img {
+    width: 120px;
+    height: auto; /* mantém proporção */
+}
+
+nav .logo-title {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* espaço entre logo e título */
+}
+
+nav .log-title h1 {
+    margin: 0;
+    color: white;
+    font-size: 20px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+    justify-content: center; /* centraliza horizontalmente */
+    /* tira o flex: 1 se tiver */
+    
+    /* deslocamento para a esquerda */
+    transform: translateX(-606px); /* ajuste o valor como quiser */
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #a9d6ff;
+}
+
+
+/* ===== MAIN ===== */
+main {
+  flex: 1;
+  padding: 60px 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.sobre h2 {
+  font-size: 30px;
+  color: var(--blue-dark);
+  margin-bottom: 25px;
+}
+
+.sobre p {
+  font-size: 16px;
+  color: #333;
+  line-height: 1.7;
+  margin-bottom: 20px;
+}
+
+.missao-visao-valores {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+  margin-top: 40px;
+}
+
+.card {
+  background: white;
+  border: 2px solid var(--blue-dark);
+  border-radius: 14px;
+  width: 280px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+}
+
+.card h3 {
+  color: var(--blue-dark);
+  margin-bottom: 10px;
+}
+
+.card p {
+  color: #444;
+}
+
+/* ===== FOOTER ===== */
+footer {
+  background: linear-gradient(135deg, #003366, #0059b3);
+  color: white;
+  text-align: center;
+  padding: 30px 20px;
+  margin-top: auto;
+}
+
+footer span {
+  color: #8ec9ff;
+  font-weight: 500;
+}
+
+footer .icons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 10px;
+}
+
+footer .icons img {
+  width: 28px;
+  height: 28px;
+  transition: transform 0.3s ease;
+}
+
+footer .icons img:hover {
+  transform: scale(1.2);
+}

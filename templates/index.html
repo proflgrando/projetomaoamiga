@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mão Amiga</title>
+    <link rel="icon" type="image/png" href="{{ url_for('static', filename='images/logo.png') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+
+    <nav>
+        <div class="logo-title">
+            <img src="{{ url_for('static', filename='images/logo.png') }}" alt="Logo Mão Amiga">
+            <h1>Mão Amiga</h1>
+        </div>
+
+        <ul>
+            <li><a href="{{ url_for('cadastro') }}">Cadastro</a></li>
+            <li><a href="{{ url_for('login') }}">Login</a></li>
+        </ul>
+    </nav>
+    
+
+  
+    <main>
+        <h2>Bem-vindo ao Mão Amiga 💙</h2>
+
+        <div class="cards-container">
+            <a href="{{ url_for('instituicao') }}" class="card card-1">
+                <h3>Escolha da Instituição</h3>
+                <p>Selecione a instituição que deseja ajudar.</p>
+            </a>
+
+            <a href="{{ url_for('doacao') }}" class="card card-2">
+                <h3>Seleção da Doação</h3>
+                <p>Escolha o que deseja doar: alimentos, roupas ou outros itens.</p>
+            </a>
+
+            <a href="{{ url_for('pontos') }}" class="card card-3">
+                <h3>Pontos de Encontro</h3>
+                <p>Veja os locais disponíveis para entrega das doações.</p>
+            </a>
+
+            <a href="{{ url_for('historico') }}" class="card card-4">
+                <h3>Histórico de Doações</h3>
+                <p>Acompanhe suas doações anteriores e o impacto gerado.</p>
+            </a>
+
+            <a href="{{ url_for('somos') }}" class="card card-5">
+                <h3>Quem Somos Nós</h3>
+                <p>Conheça nossa missão, valores e a equipe por trás do Mão Amiga.</p>
+            </a>
+
+            <a href="https://wa.me/5511999999999" target="_blank" class="card card-6">
+                <h3>Chat / Contato</h3>
+                <p>Fale conosco diretamente pelo WhatsApp e tire suas dúvidas.</p>
+            </a>
+        </div>
+    </main>
+
+
+         <footer>
+        <p>© 2025 <span>Mão Amiga</span> — Sempre perto de quem precisa 💙</p>
+        <div class="icons">
+             <a href="https://www.instagram.com/" target="_blank">
+      <img src="{{ url_for('static', filename='images/instagram.png') }}" alt="Instagram">
+    </a>
+    <a href="https://web.whatsapp.com/" target="_blank">
+      <img src="{{ url_for('static', filename='images/whats.png') }}" alt="WhatsApp">
+    </a>
+        </div>
+    </footer>
+
+</body>
+</html>

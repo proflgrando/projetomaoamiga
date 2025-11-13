@@ -1,0 +1,149 @@
+:root {
+  --blue-dark: #003366;
+  --blue-light: #0059b3;
+  --white: #ffffff;
+}
+
+/* ===== RESET ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: #f4f6fa;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* ===== NAVBAR ===== */
+nav {
+  background-color: var(--blue-dark);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 40px;
+}
+
+nav img {
+  width: 110px;
+  height: auto;
+}
+
+nav h1 {
+  font-size: 22px;
+  font-weight: 600;
+}
+
+/* ===== FORM CADASTRO ===== */
+.form-container {
+  width: 90%;
+  max-width: 600px; /* 🔹 Aumentei a largura */
+  margin: 100px auto;
+  background: var(--white);
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.form-container h2 {
+  color: var(--blue-dark);
+  font-size: 26px;
+  margin-bottom: 25px;
+}
+
+.form-container form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.form-container label {
+  text-align: left;
+  color: var(--blue-dark);
+  font-weight: 500;
+  margin-bottom: 3px;
+}
+
+.form-container input {
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  font-size: 15px;
+  transition: 0.3s;
+}
+
+.form-container input:focus {
+  border-color: var(--blue-light);
+  box-shadow: 0 0 5px rgba(0, 89, 179, 0.3);
+  outline: none;
+}
+
+.form-container button {
+  background: var(--blue-dark);
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  font-weight: 600;
+}
+
+.form-container button:hover {
+  background: var(--blue-light);
+}
+
+.form-container p {
+  margin-top: 25px;
+  font-size: 15px;
+}
+
+.form-container a {
+  color: var(--blue-light);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.form-container a:hover {
+  text-decoration: underline;
+}
+
+/* ===== FLASH MESSAGES ===== */
+.flash {
+  margin-bottom: 15px;
+  padding: 12px;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+.flash.sucesso {
+  background: #d4edda;
+  color: #155724;
+}
+
+.flash.erro {
+  background: #f8d7da;
+  color: #721c24;
+}
+
+.flash.info {
+  background: #cce5ff;
+  color: #004085;
+}
+
+/* ===== FOOTER ===== */
+footer {
+  background: linear-gradient(135deg, #003366, #0059b3);
+  color: white;
+  text-align: center;
+  padding: 25px 10px;
+  margin-top: auto;
+  font-size: 14px;
+}

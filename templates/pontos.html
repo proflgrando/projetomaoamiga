@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ponto de Coleta</title>
+    <link rel="icon" type="image/png" href="{{ url_for('static', filename='images/logo.png') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='pontos.css') }}">
+
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+          crossorigin=""/>
+</head>
+<body>
+
+        <nav>
+        <div class="logo-title">
+            <img src="{{ url_for('static', filename='images/logo.png') }}" alt="Logo Mão Amiga">
+            <h1>Mão Amiga</h1>
+        </div>
+        <ul>
+            <li><a href="{{ url_for('index') }}">Início</a></li>
+            <li><a href="{{ url_for('instituicao') }}">Escolha da Instituição</a></li>
+            <li><a href="{{ url_for('doacao') }}">Doação</a></li>
+            <li><a href="{{ url_for('pontos') }}">Pontos</a></li>
+            <li><a href="{{ url_for('historico') }}">Histórico</a></li>
+            <li><a href="https://wa.me/5511999999999" target="_blank">Chat</a></li>
+        </ul>
+    </nav>
+    <main>
+        <h2>Ponto de Coleta Próximo</h2>
+
+
+   
+        <div id="map"></div>
+    </main>
+
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const ponto = [-23.55052, -46.633308];
+
+            const map = L.map('map').setView(ponto, 13);
+
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                maxZoom: 19,
+                attribution: '&copy; OpenStreetMap contributors'
+            }).addTo(map);
+
+
+            L.marker(ponto).addTo(map)
+                .bindPopup('Ponto de coleta próximo')
+                .openPopup();
+        });
+    </script>
+       <footer>
+        <p>© 2025 <span>Mão Amiga</span> — Sempre perto de quem precisa 💙</p>
+        <div class="icons">
+             <a href="https://www.instagram.com/" target="_blank">
+      <img src="{{ url_for('static', filename='images/instagram.png') }}" alt="Instagram">
+    </a>
+    <a href="https://web.whatsapp.com/" target="_blank">
+      <img src="{{ url_for('static', filename='images/whats.png') }}" alt="WhatsApp">
+    </a>
+        </div>
+    </footer>
+
+</body>
+</html>

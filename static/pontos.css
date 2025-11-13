@@ -1,0 +1,153 @@
+:root {
+    --blue-dark: #003366;
+    --white: #ffffff;
+}
+
+/* ===== RESET ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: #f4f6fa;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* ===== NAVBAR ===== */
+nav {
+    background-color: #003366; /* mesmo azul do footer */
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 40px;
+}
+
+nav img {
+    width: 120px;
+    height: auto; /* mantém proporção */
+}
+
+nav .logo-title {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* espaço entre logo e título */
+}
+
+nav .log-title h1 {
+    margin: 0;
+    color: white;
+    font-size: 20px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+    justify-content: center; /* centraliza horizontalmente */
+    /* tira o flex: 1 se tiver */
+    
+    /* deslocamento para a esquerda */
+    transform: translateX(-606px); /* ajuste o valor como quiser */
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #a9d6ff;
+}
+
+/* ===== MAIN ===== */
+main {
+    width: 90%;
+    max-width: 900px;
+    margin: 50px auto 80px auto; /* centraliza o main e adiciona espaço superior/inferior */
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h2 {
+    color: var(--blue-dark);
+    margin-bottom: 30px;
+}
+
+.info-doacao {
+    background: var(--white);
+    border: 2px solid var(--blue-dark);
+    border-radius: 16px;
+    padding: 20px;
+    text-align: left;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+    width: 100%;
+    max-width: 600px; /* limita o tamanho do card de info */
+}
+
+.info-doacao p {
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+
+/* ===== MAPA CENTRALIZADO ===== */
+#map {
+    width: 100%;
+    max-width: 800px; /* limita a largura do mapa */
+    height: 450px; /* mapa maior */
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    margin: 0 auto 40px auto; /* centraliza horizontalmente e adiciona espaçamento abaixo */
+}
+
+/* ===== FOOTER ===== */
+footer {
+  background: linear-gradient(135deg, #003366, #0059b3);
+  color: white;
+  text-align: center;
+  padding: 40px 20px;
+  margin-top: auto; /* garante que fique no final da página */
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
+}
+
+footer p {
+  margin: 5px 0 20px 0;
+  font-size: 15px;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+}
+
+footer span {
+  color: #8EC9FF;
+  font-weight: 500;
+}
+
+footer .icons {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+}
+
+footer .icons img {
+  width: 28px;
+  height: 28px;
+  filter: drop-shadow(0 0 5px rgba(255,255,255,0.3));
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+footer .icons img:hover {
+  transform: scale(1.2);
+  filter: drop-shadow(0 0 8px rgba(255,255,255,0.6));
+}

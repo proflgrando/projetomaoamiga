@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Histórico de Doações</title>
+    <link rel="icon" type="image/png" href="{{ url_for('static', filename='images/logo.png') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='historico.css') }}">
+</head>
+<body>
+
+    <nav>
+        <div class="logo-title">
+            <img src="{{ url_for('static', filename='images/logo.png') }}" alt="Logo Mão Amiga">
+            <h1>Mão Amiga</h1>
+        </div>
+        <ul>
+            <li><a href="{{ url_for('index') }}">Início</a></li>
+            <li><a href="{{ url_for('instituicao') }}">Escolha da Instituição</a></li>
+            <li><a href="{{ url_for('doacao') }}">Doação</a></li>
+            <li><a href="{{ url_for('pontos') }}">Pontos</a></li>
+            <li><a href="{{ url_for('historico') }}">Histórico</a></li>
+            <li><a href="https://wa.me/5511999999999" target="_blank">Chat</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <h2>Histórico de Doações</h2>
+
+
+        <section class="historico-doacoes">
+            <h3>Doações Anteriores</h3>
+            <div class="historico-split">
+                
+         
+                <div class="blocos-container">
+                    <div class="bloco">
+                        <h4>Lar Esperança</h4>
+                        <p>Item: Alimento</p>
+                        <p>Quantidade: 10kg</p>
+                        <p>Data: 01/11/2025</p>
+                    </div>
+                    <div class="bloco">
+                        <h4>Casa Solidária</h4>
+                        <p>Item: Roupa</p>
+                        <p>Quantidade: 5 peças</p>
+                        <p>Data: 02/11/2025</p>
+                    </div>
+                    <div class="bloco">
+                        <h4>Amigos do Bem</h4>
+                        <p>Item: Alimento</p>
+                        <p>Quantidade: 15kg</p>
+                        <p>Data: 03/11/2025</p>
+                    </div>
+                    <div class="bloco">
+                        <h4>Sementes do Amor</h4>
+                        <p>Item: Roupa</p>
+                        <p>Quantidade: 8 peças</p>
+                        <p>Data: 04/11/2025</p>
+                    </div>
+                </div>
+
+        
+                <div class="video-container">
+                    <video controls>
+                      <source src="{{ url_for('static', filename='images/doacao.mp4') }}" type="video/mp4">
+
+                    
+                    </video>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+
+         <footer>
+        <p>© 2025 <span>Mão Amiga</span> — Sempre perto de quem precisa 💙</p>
+        <div class="icons">
+             <a href="https://www.instagram.com/" target="_blank">
+      <img src="{{ url_for('static', filename='images/instagram.png') }}" alt="Instagram">
+    </a>
+    <a href="https://web.whatsapp.com/" target="_blank">
+      <img src="{{ url_for('static', filename='images/whats.png') }}" alt="WhatsApp">
+    </a>
+        </div>
+    </footer>
+
+</body>
+</html>

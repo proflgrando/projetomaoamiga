@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escolha da Instituição</title>
+    <link rel="icon" type="image/png" href="{{ url_for('static', filename='images/logo.png') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='escolha.css') }}">
+</head>
+<body>
+
+
+    <nav>
+        <div class="logo-title">
+            <img src="{{ url_for('static', filename='images/logo.png') }}" alt="Logo Mão Amiga">
+            <h1>Mão Amiga</h1>
+        </div>
+        <ul>
+            <li><a href="{{ url_for('index') }}">Início</a></li>
+            <li><a href="{{ url_for('instituicao') }}">Escolha da Instituição</a></li>
+            <li><a href="{{ url_for('doacao') }}">Doação</a></li>
+            <li><a href="{{ url_for('pontos') }}">Pontos</a></li>
+            <li><a href="{{ url_for('historico') }}">Histórico</a></li>
+            <li><a href="https://wa.me/5511999999999" target="_blank">Chat</a></li>
+        </ul>
+    </nav>
+
+   
+    <main>
+        <h2>Escolha da Instituição</h2>
+       
+        <form id="filterForm" method="GET" action="{{ url_for('instituicao') }}">
+          <label for="estado">Estado:</label>
+            <select name="estado" id="estado" required>
+            <option value="">Selecione</option>
+            <option value="SP">São Paulo</option>
+            <option value="MG">Minas Gerais</option>
+            <option value="RJ">Rio de Janeiro</option>
+
+</select>
+            
+
+            <label for="municipio">Município:</label>
+            <input type="text" id="municipio" name="municipio" placeholder="Digite seu município" required>
+
+            <button type="submit">Buscar</button>
+        </form>
+
+      
+        <div class="cards-container">
+            {% if resultados %}
+                {% for inst in resultados %}
+                    <div class="card">
+                        <h3>{{ inst.nome }}</h3>
+                        <p>{{ inst.municipio }}/{{ inst.estado }}</p>
+                    </div>
+                {% endfor %}
+            {% else %}
+                <p>Nenhuma instituição encontrada.</p>
+            {% endif %}
+        </div>
+    </main>
+      <footer>
+        <p>© 2025 <span>Mão Amiga</span> — Sempre perto de quem precisa 💙</p>
+        <div class="icons">
+             <a href="https://www.instagram.com/" target="_blank">
+      <img src="{{ url_for('static', filename='images/instagram.png') }}" alt="Instagram">
+    </a>
+    <a href="https://web.whatsapp.com/" target="_blank">
+      <img src="{{ url_for('static', filename='images/whats.png') }}" alt="WhatsApp">
+    </a>
+        </div>
+    </footer>
+
+</body>
+</html>

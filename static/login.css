@@ -1,0 +1,138 @@
+:root {
+  --blue-dark: #003366;
+  --blue-light: #0059b3;
+  --white: #ffffff;
+}
+
+/* ===== RESET ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: #f4f6fa;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* ===== NAVBAR ===== */
+nav {
+  background-color: var(--blue-dark);
+  color: white;
+  display: flex;
+  align-items: center;
+  padding: 10px 40px;
+  gap: 10px;
+}
+
+nav img {
+  width: 120px;
+  height: auto;
+}
+
+nav h1 {
+  font-size: 22px;
+  font-weight: 600;
+}
+
+/* ===== FORM LOGIN ===== */
+.form-container {
+  max-width: 400px;
+  margin: 100px auto;
+  background: var(--white);
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.form-container h2 {
+  color: var(--blue-dark);
+  margin-bottom: 20px;
+}
+
+.form-container form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.form-container label {
+  text-align: left;
+  color: var(--blue-dark);
+  font-weight: 500;
+}
+
+.form-container input {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+.form-container button {
+  background: var(--blue-dark);
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 8px;
+  font-size: 15px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  font-weight: 600;
+}
+
+.form-container button:hover {
+  background: var(--blue-light);
+}
+
+.form-container p {
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+.form-container a {
+  color: var(--blue-light);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.form-container a:hover {
+  text-decoration: underline;
+}
+
+/* ===== FLASH MESSAGES ===== */
+.flash {
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+.flash.sucesso {
+  background: #d4edda;
+  color: #155724;
+}
+
+.flash.erro {
+  background: #f8d7da;
+  color: #721c24;
+}
+
+.flash.info {
+  background: #cce5ff;
+  color: #004085;
+}
+
+/* ===== FOOTER ===== */
+footer {
+  background: linear-gradient(135deg, #003366, #0059b3);
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: auto;
+}

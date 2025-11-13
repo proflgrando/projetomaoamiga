@@ -1,0 +1,213 @@
+:root {
+  --blue-dark: #003366;
+  --blue-light: #0059b3;
+  --white: #ffffff;
+  --card-text: #003366;
+}
+
+/* ===== RESET ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: #f4f6fa;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* ===== NAVBAR ===== */
+nav {
+    background-color: #003366; /* mesmo azul do footer */
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 40px;
+}
+
+nav img {
+    width: 120px;
+    height: auto; /* mantém proporção */
+}
+
+nav .logo-title {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* espaço entre logo e título */
+}
+
+nav .log-title h1 {
+    margin: 0;
+    color: white;
+    font-size: 20px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+    justify-content: center; /* centraliza horizontalmente */
+    /* tira o flex: 1 se tiver */
+    
+    /* deslocamento para a esquerda */
+    transform: translateX(-606px); /* ajuste o valor como quiser */
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #a9d6ff;
+}
+/* ===== MAIN ===== */
+main {
+  flex: 1;
+  padding: 60px 40px 80px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Título centralizado */
+main h2 {
+  margin-bottom: 50px;
+  font-size: 28px;
+  color: var(--blue-dark);
+  text-align: center; /* centraliza o título */
+}
+
+/* ===== Histórico de Doações ===== */
+.historico-doacoes h3 {
+  margin-bottom: 30px;
+  color: var(--blue-dark);
+  text-align: left;
+}
+
+/* Container split (blocos + vídeo) */
+.historico-split {
+  display: flex;
+  gap: 30px;
+  justify-content: flex-start; /* blocos à esquerda */
+  align-items: stretch; /* vídeo ocupa toda altura */
+  flex-wrap: wrap;
+  margin-bottom: 50px;
+}
+
+/* Coluna esquerda: blocos */
+.blocos-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  flex: 1 1 400px;
+}
+
+/* Bloco individual */
+.bloco {
+  background: var(--white);
+  border: 2px solid var(--blue-dark);
+  border-radius: 16px;
+  padding: 20px;
+  text-align: left;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  color: var(--card-text);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.bloco:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+}
+
+.bloco h4 {
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+.bloco p {
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+/* Coluna direita: vídeo ocupa altura total da seção */
+.video-container {
+  flex: 1 1 600px; /* ocupa lado direito todo */
+  display: flex;
+  align-items: stretch;
+}
+
+.video-container video {
+  width: 100%;
+  height: 100%; /* vídeo preenche altura */
+  object-fit: cover;
+  border-radius: 16px;
+}
+
+
+
+
+
+/* ===== Footer ===== */
+footer {
+  background: linear-gradient(135deg, #003366, #0059b3);
+  color: white;
+  text-align: center;
+  padding: 40px 20px;
+  margin-top: 80px;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
+}
+
+footer p {
+  margin: 5px 0 20px 0;
+  font-size: 15px;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+}
+
+footer span {
+  color: #8EC9FF;
+  font-weight: 500;
+}
+
+footer .icons {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+}
+
+footer .icons img {
+  width: 28px;
+  height: 28px;
+  filter: drop-shadow(0 0 5px rgba(255,255,255,0.3));
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+footer .icons img:hover {
+  transform: scale(1.2);
+  filter: drop-shadow(0 0 8px rgba(255,255,255,0.6));
+}
+
+/* ===== Responsividade ===== */
+@media (max-width: 800px) {
+  .historico-split {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .blocos-container, .video-container {
+    flex: 1 1 100%;
+  }
+  
+  .video-container video {
+    height: auto;
+  }
+}
